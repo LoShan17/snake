@@ -5,7 +5,6 @@ LEFT = (0, -1)
 
 COMMANDS = {"w": UP, "s": DOWN, "d": RIGHT, "a": LEFT}
 
-import os
 import random
 import curses
 import time
@@ -77,10 +76,10 @@ class Game:
         direction = None
         try:
             direction = COMMANDS[command]
-            #stdscr.addstr(30, 10, "try direction %s" % str(direction))
+            # stdscr.addstr(30, 10, "try direction %s" % str(direction))
         except KeyError:
             pass
-            #stdscr.addstr(30, 10, "wrong command but all good %s" % str(command))
+            # stdscr.addstr(30, 10, "wrong command but all good %s" % str(command))
         if direction:
             self.snake.direction = direction
         # stdscr.addstr(35, 10, "snake direction debug %s" % str(self.snake.direction))
